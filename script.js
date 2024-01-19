@@ -113,4 +113,13 @@ const formatResults = (status, change) => {
         .join('')}  
     `;
   };
-  
+  // Event listener for the purchase button click
+  purchaseBtn.addEventListener('click', checkResults);
+
+cash.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    checkResults();
+  }
+});
+
+updateUI();
